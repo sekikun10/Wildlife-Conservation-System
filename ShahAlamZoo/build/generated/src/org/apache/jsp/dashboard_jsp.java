@@ -1,0 +1,278 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html lang=\"en\">\n");
+      out.write("<head>\n");
+      out.write("    <meta charset=\"UTF-8\">\n");
+      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("    <title>Dashboard - Shah Alam Zoo</title>\n");
+      out.write("    <style>\n");
+      out.write("        body {\n");
+      out.write("            font-family: Arial, sans-serif;\n");
+      out.write("            margin: 0;\n");
+      out.write("            padding: 0;\n");
+      out.write("            background: linear-gradient(to top, rgba(0,0,0,0.25)50%, rgba(0,0,0,0.25)50%),url(Downloads/loll.png);\n");
+      out.write("            background-size: cover;\n");
+      out.write("        }\n");
+      out.write("        header {\n");
+      out.write("            \n");
+      out.write("            color: white;\n");
+      out.write("            padding: 10px 20px;\n");
+      out.write("            display: flex;\n");
+      out.write("            align-items: center;\n");
+      out.write("            justify-content: space-between;\n");
+      out.write("        }\n");
+      out.write("        header img {\n");
+      out.write("            margin-top: 30px;\n");
+      out.write("            width: 12%; /* Adjust to fit container */\n");
+      out.write("            height: auto;\n");
+      out.write("            border-radius: 10px;\n");
+      out.write("        }\n");
+      out.write("        header h1 {\n");
+      out.write("            background-color: #454B1B;\n");
+      out.write("            color: white;\n");
+      out.write("            text-align: center;\n");
+      out.write("            font-size: 48px;\n");
+      out.write("            font-weight: bold;\n");
+      out.write("            margin-bottom: 5px;\n");
+      out.write("            font-family: Lucida Console,Monospace;\n");
+      out.write("        }\n");
+      out.write("        \n");
+      out.write("        header h2 {\n");
+      out.write("            margin-top: 5px; /* Reduce space above Welcome */\n");
+      out.write("            font-size: 20px; /* Adjust size if needed */\n");
+      out.write("            font-family: Lucida Console,Monospace;\n");
+      out.write("        }\n");
+      out.write("        nav {\n");
+      out.write("            display: flex;\n");
+      out.write("            justify-content: center;\n");
+      out.write("            background-color: #333;\n");
+      out.write("            padding: 10px;\n");
+      out.write("        }\n");
+      out.write("        nav a {\n");
+      out.write("            color: white;\n");
+      out.write("            text-decoration: none;\n");
+      out.write("            margin: 0 15px;\n");
+      out.write("            font-size: 18px;\n");
+      out.write("        }\n");
+      out.write("        nav a:hover {\n");
+      out.write("            color: #ffdd57;\n");
+      out.write("        }\n");
+      out.write("        .container {\n");
+      out.write("            max-width: 800px;\n");
+      out.write("            margin: 20px auto;\n");
+      out.write("            padding: 20px;\n");
+      out.write("            background-color: white;\n");
+      out.write("            border-radius: 8px;\n");
+      out.write("            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n");
+      out.write("        }\n");
+      out.write("        table {\n");
+      out.write("            width: 100%;\n");
+      out.write("            border-collapse: collapse;\n");
+      out.write("            margin-top: 20px;\n");
+      out.write("        }\n");
+      out.write("        table th, table td {\n");
+      out.write("            border: 5px solid #ddd;\n");
+      out.write("            padding: 10px;\n");
+      out.write("            text-align: center;\n");
+      out.write("        }\n");
+      out.write("        table th {\n");
+      out.write("            background-color: rgba(69, 75, 27, 0.7);\n");
+      out.write("            color: white;\n");
+      out.write("        }\n");
+      out.write("        .btn {\n");
+      out.write("            display: inline-block;\n");
+      out.write("            margin: 15px auto;\n");
+      out.write("            padding: 10px 20px;\n");
+      out.write("            background-color: #40826D;\n");
+      out.write("            color: white;\n");
+      out.write("            text-decoration: none;\n");
+      out.write("            border-radius: 4px;\n");
+      out.write("            text-align: center;\n");
+      out.write("        }\n");
+      out.write("        .btn:hover {\n");
+      out.write("            background-color: #4CBB17;\n");
+      out.write("        }\n");
+      out.write("        .image-container {\n");
+      out.write("            text-align: center;\n");
+      out.write("            margin-top: 20px;\n");
+      out.write("        }\n");
+      out.write("        .image-container img {\n");
+      out.write("            width: 35%; /* Adjust to fit container */\n");
+      out.write("            height: auto;\n");
+      out.write("            border-radius: 10px; /* Optional: round the corners */\n");
+      out.write("        }\n");
+      out.write("        .header-text {\n");
+      out.write("            font-size: 30px;\n");
+      out.write("            color: white;\n");
+      out.write("            text-align: center;\n");
+      out.write("            position: relative;\n");
+      out.write("            top: -50px;\n");
+      out.write("            font-family: Lucida Console,Monospace;\n");
+      out.write("            margin-top: -80px;\n");
+      out.write("        }\n");
+      out.write("        .header-text p {\n");
+      out.write("             /* Align text properly */\n");
+      out.write("            font-family: Lucida Console,Monospace;\n");
+      out.write("            font-size: 20px;\n");
+      out.write("            margin-top: -30px;\n");
+      out.write("        }\n");
+      out.write("        .map h1{\n");
+      out.write("            font-size: 30px;\n");
+      out.write("            color: white;\n");
+      out.write("            text-align: center;\n");
+      out.write("            background-color: rgba(69, 75, 27, 0.7);\n");
+      out.write("            padding: 8px;\n");
+      out.write("            margin-top: -30px;\n");
+      out.write("        }\n");
+      out.write("    </style>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("    <header>\n");
+      out.write("        <img src=\"Downloads/logoo.png\" alt=\"Zoo Logo\" class=\"logo\">\n");
+      out.write("        <nav>\n");
+      out.write("            <a href=\"logout.jsp\">Log Out</a>\n");
+      out.write("        </nav>\n");
+      out.write("    </header>\n");
+      out.write("    <div class=\"header-text\">\n");
+      out.write("        <h1>Dashboard</h1>\n");
+      out.write("        <p>Welcome to Shah Alam Zoo Staff Management System</p>\n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"map\">\n");
+      out.write("        <h1>Shah Alam Zoo Map</h1>\n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"image-container\">\n");
+      out.write("        <img src=\"Downloads/map zooo.png\" alt=\"Zoo Animals Image\"> \n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"container\">\n");
+      out.write("        <div style=\"display: flex; align-items: center;\">\n");
+      out.write("            <h2 style=\"flex-grow: 1;\">Animals</h2>\n");
+      out.write("            <a href=\"animalmanagement.jsp\" class=\"btn\" style=\"margin-left: auto;\">Go to Animal Management</a>\n");
+      out.write("        </div>\n");
+      out.write("        <table>\n");
+      out.write("            <thead>\n");
+      out.write("                <tr>\n");
+      out.write("                    <th>Species</th>\n");
+      out.write("                    <th>Location</th>\n");
+      out.write("                    <th>View Animals</th>\n");
+      out.write("                </tr>\n");
+      out.write("            </thead>\n");
+      out.write("            <tbody>\n");
+      out.write("                <!-- Dynamic rows will be filled with data from the database -->\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Birds</td>\n");
+      out.write("                    <td>Location 1</td>\n");
+      out.write("                    <td><a href=\"bird.jsp\" class=\"btn\">Peacock</a></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Reptiles</td>\n");
+      out.write("                    <td>Location 2</td>\n");
+      out.write("                    <td><a href=\"reptile.jsp\" class=\"btn\">Crocodile</a></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Fish & Marine</td>\n");
+      out.write("                    <td>Location 3</td>\n");
+      out.write("                    <td><a href=\"turtle.jsp\" class=\"btn\">Turtle</a></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Amphibia</td>\n");
+      out.write("                    <td>Location 4</td>\n");
+      out.write("                    <td><a href=\"amphibia.jsp\" class=\"btn\">Axolotl</a></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Mammals</td>\n");
+      out.write("                    <td>Location 5</td>\n");
+      out.write("                    <td><a href=\"panda.jsp\" class=\"btn\">Panda</a></td>\n");
+      out.write("                </tr>\n");
+      out.write("            </tbody>\n");
+      out.write("        </table>\n");
+      out.write("        \n");
+      out.write("        <table>\n");
+      out.write("            <thead>\n");
+      out.write("                <tr>\n");
+      out.write("                    <th>LOCATION</th>\n");
+      out.write("                    <th>DETAILS</th>\n");
+      out.write("                </tr>\n");
+      out.write("            </thead>\n");
+      out.write("            <tbody>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Location 1</td>\n");
+      out.write("                    <td>Birds</td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Location 2</td>\n");
+      out.write("                    <td>Reptilia</td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Location 3</td>\n");
+      out.write("                    <td>Fish & Marine Animals</td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Location 4</td>\n");
+      out.write("                    <td>Amphibia</td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Location 5</td>\n");
+      out.write("                    <td>Mammals</td>\n");
+      out.write("                </tr>\n");
+      out.write("            </tbody>\n");
+      out.write("        </table>\n");
+      out.write("        \n");
+      out.write("    </div>\n");
+      out.write("    \n");
+      out.write("</body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
